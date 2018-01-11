@@ -33,27 +33,28 @@ class Form extends React.Component {
 
 
 //this () --> when the button is clicked, the function renders
-  handleFormSubmit = (password, event) => {
+  handleFormSubmit = (password, event, len) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
 
-    alert(`Hello ${this.state.firstName} ${this.state.lastName} ${this.state.password}`)
     
-    if(this.password.length < 6){
+
+    if(this.state.password.len < 6){
       alert("Choose a more secure password")
 
-    }else if(this.password.length >= 6){
+    }else if(this.state.password.len >= 6){
         this.setState({
           firstName: "",
           lastName: "",
           password: "",
-        });
+        })
+      alert(`Hello ${this.state.firstName} ${this.state.lastName} ${this.state.password}`)
       }
     
     //alert the value of the name which is the firstName and lastName (lines: 4-12 && 18-27)
   };//end of handleFormSubmit()
 
-
+ 
 
 
 
