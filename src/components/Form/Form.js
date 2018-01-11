@@ -37,11 +37,12 @@ class Form extends React.Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
 
-    if(this.state.password.length < 6){
+    alert(`Hello ${this.state.firstName} ${this.state.lastName} ${this.state.password}`)
+    
+    if(this.password.length < 6){
       alert("Choose a more secure password")
-      
-    }else if(this.state.password.length >= 6){
-      alert(`Hello ${this.state.firstName} ${this.state.lastName} ${this.state.password}`);
+
+    }else if(this.password.length >= 6){
         this.setState({
           firstName: "",
           lastName: "",
